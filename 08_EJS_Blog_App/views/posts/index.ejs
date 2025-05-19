@@ -1,0 +1,39 @@
+<%- include('../layouts/layout', { title: title, body: `
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="mb-4">Blog Posts</h1>
+    <a href="/posts/new" class="btn btn-primary mb-4">Create New Post</a>
+    
+    <% if (posts.length === 0) { %>
+      <div class="alert alert-info">
+        No posts found. Create your first post!
+      </div>
+    <% } else { %>
+      <div class="row">
+        <% posts.forEach(post => { %>
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title"><%= post.title %></h5>
+                <p class="card-text"><%= post.shortDescription %></p>
+                <div class="text-muted mb-3">
+                  <small>Posted on: <%= post.createdAt.toLocaleDateString() %></small>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <a href="/posts/<%= post._id %>" class="btn btn-primary">Read More</a>
+                  <div>
+                    <a href="/posts/<%= post._id %>/edit" class="btn btn-secondary me-2">Edit</a>
+                    <form action="/posts/<%= post._id %>?_method=DELETE" method="POST" class="d-inline">
+                      <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this post?')">Delete</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    <% } %>
+  </div>
+</div>
+` }) %>

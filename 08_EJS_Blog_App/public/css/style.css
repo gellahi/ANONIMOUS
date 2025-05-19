@@ -1,0 +1,39 @@
+/* Main Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+}
+
+/* Card Styles */
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Post Content */
+.post-content {
+  white-space: pre-line;
+  line-height: 1.8;
+}
+
+/* Form Styles */
+textarea {
+  resize: vertical;
+}
+
+/* Footer Styles */
+footer {
+  margin-top: auto;
+}
