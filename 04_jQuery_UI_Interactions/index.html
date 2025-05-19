@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery UI Interactions</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>jQuery UI Interactions</h1>
+            <div class="theme-switcher">
+                <button id="light-theme">Light Theme</button>
+                <button id="dark-theme">Dark Theme</button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Feature 1: Toggle Paragraph Visibility -->
+            <section class="feature-section" id="toggle-section">
+                <h2>Toggle Paragraph Visibility</h2>
+                <button id="toggle-btn">Show/Hide Paragraph</button>
+                <div id="toggle-content">
+                    <p>This is a paragraph that can be toggled with a smooth animation effect. 
+                    Click the button above to see it in action. jQuery makes these kinds of 
+                    animations very simple to implement.</p>
+                </div>
+            </section>
+
+            <!-- Feature 2: Real-Time Form Validation -->
+            <section class="feature-section" id="form-section">
+                <h2>Registration Form with Real-Time Validation</h2>
+                <form id="registration-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="validation-message" id="name-validation"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="validation-message" id="email-validation"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        <span class="validation-message" id="password-validation"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                        <span class="validation-message" id="confirm-password-validation"></span>
+                    </div>
+                    
+                    <button type="submit" id="submit-btn">Register</button>
+                </form>
+            </section>
+
+            <!-- Feature 3: Theme Switcher (buttons are in the header) -->
+
+            <!-- Feature 4: Character Counter -->
+            <section class="feature-section" id="counter-section">
+                <h2>Character Counter</h2>
+                <div class="textarea-container">
+                    <label for="text-area">Enter your text:</label>
+                    <textarea id="text-area" rows="5" maxlength="200"></textarea>
+                    <div id="char-counter">Characters: 0/200</div>
+                </div>
+            </section>
+
+            <!-- Feature 5: Random Quote Generator -->
+            <section class="feature-section" id="quote-section">
+                <h2>Random Quote Generator</h2>
+                <button id="quote-btn">Generate Quote</button>
+                <div id="quote-display">
+                    <blockquote id="quote-text"></blockquote>
+                    <cite id="quote-author"></cite>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 jQuery UI Interactions</p>
+        </footer>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
