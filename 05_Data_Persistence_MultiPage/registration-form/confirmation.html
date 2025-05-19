@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Confirmation</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="app-nav">
+            <a href="../index.html">Home</a>
+            <a href="index.html">Registration</a>
+        </div>
+        
+        <h1>Registration Complete</h1>
+        <div class="card">
+            <h2>Thank You for Registering!</h2>
+            <p>Your account has been created successfully.</p>
+            
+            <div id="registration-summary" style="margin: 30px 0;">
+                <h3>Account Information</h3>
+                <div class="form-group">
+                    <label>Full Name:</label>
+                    <p id="summary-fullname"></p>
+                </div>
+                
+                <div class="form-group">
+                    <label>Email Address:</label>
+                    <p id="summary-email"></p>
+                </div>
+                
+                <div class="form-group">
+                    <label>Password:</label>
+                    <p>********</p>
+                </div>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between;">
+                <button type="button" class="btn btn-secondary back-btn">Back to Home</button>
+                <button type="button" class="btn" id="start-over-btn">Start Over</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3>localStorage Demo</h3>
+            <p>Your registration data was retrieved from localStorage.</p>
+            <p>This data will persist until you clear it or it expires.</p>
+            <p>Click "Start Over" to clear the data and begin a new registration.</p>
+        </div>
+    </div>
+    
+    <script src="../js/utils.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="js/registration.js"></script>
+</body>
+</html>

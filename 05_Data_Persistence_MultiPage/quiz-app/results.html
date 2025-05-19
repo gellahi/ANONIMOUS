@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App - Results</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="app-nav">
+            <a href="../index.html">Home</a>
+            <a href="index.html">Quiz App</a>
+        </div>
+        
+        <h1>Quiz Results</h1>
+        <div class="card">
+            <h2>Your Score</h2>
+            <div style="text-align: center; margin: 30px 0;">
+                <div id="score-display" style="font-size: 48px; font-weight: bold; color: #3498db;"></div>
+                <p id="score-message"></p>
+            </div>
+            
+            <div id="answers-review">
+                <h3>Review Your Answers</h3>
+                <div id="answers-container">
+                    <!-- Answers will be loaded dynamically -->
+                </div>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="back-to-home-btn" class="btn btn-secondary">Back to Home</button>
+                <button id="restart-quiz-btn" class="btn">Restart Quiz</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3>sessionStorage Demo</h3>
+            <p>Your quiz results were retrieved from sessionStorage.</p>
+            <p>If you close your browser and come back, your results will be gone.</p>
+            <p>Click "Restart Quiz" to clear the data and start a new quiz.</p>
+        </div>
+    </div>
+    
+    <script src="../js/utils.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

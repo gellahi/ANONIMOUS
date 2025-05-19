@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App - Home</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="app-nav">
+            <a href="../index.html">Home</a>
+            <a href="index.html">Quiz App</a>
+        </div>
+        
+        <h1>Web Development Quiz</h1>
+        <div class="card">
+            <h2>Test Your Knowledge</h2>
+            <p>This quiz contains 3 multiple-choice questions about web development.</p>
+            <p>Your progress and answers will be saved using sessionStorage.</p>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <button id="start-quiz-btn" class="btn">Start Quiz</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3>About sessionStorage</h3>
+            <p>This quiz app uses <strong>sessionStorage</strong> to save your progress and score.</p>
+            <p>Unlike localStorage, sessionStorage data is cleared when you close your browser.</p>
+            <p>This is useful for temporary data that should not persist between sessions.</p>
+        </div>
+    </div>
+    
+    <script src="../js/utils.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

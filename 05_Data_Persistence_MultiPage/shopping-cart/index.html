@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Products</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="app-nav">
+            <a href="../index.html">Home</a>
+            <a href="index.html">Products</a>
+            <a href="cart.html">Cart <span id="cart-count">(0)</span></a>
+        </div>
+        
+        <h1>Product Catalog</h1>
+        <div class="card">
+            <h2>Available Products</h2>
+            <p>Browse our selection and add items to your cart.</p>
+            
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3>About Cookies</h3>
+            <p>This shopping cart uses <strong>cookies</strong> to save your selected items.</p>
+            <p>Cookies are small pieces of data stored by your browser.</p>
+            <p>They can be set with an expiration date and are sent with every request to the server.</p>
+        </div>
+    </div>
+    
+    <script src="../js/utils.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="js/shopping-cart.js"></script>
+</body>
+</html>

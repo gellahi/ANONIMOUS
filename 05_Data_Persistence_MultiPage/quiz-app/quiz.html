@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App - Questions</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="app-nav">
+            <a href="../index.html">Home</a>
+            <a href="index.html">Quiz App</a>
+        </div>
+        
+        <h1>Web Development Quiz</h1>
+        <div class="card">
+            <div id="quiz-progress">
+                <p>Question <span id="current-question">1</span> of <span id="total-questions">3</span></p>
+                <div style="background-color: #f0f0f0; height: 10px; border-radius: 5px; margin: 10px 0;">
+                    <div id="progress-bar" style="background-color: #3498db; height: 100%; width: 33%; border-radius: 5px;"></div>
+                </div>
+            </div>
+            
+            <div id="quiz-container" class="quiz-container">
+                <!-- Questions will be loaded dynamically -->
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+                <button id="prev-btn" class="btn btn-secondary" disabled>Previous</button>
+                <button id="next-btn" class="btn">Next</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/utils.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

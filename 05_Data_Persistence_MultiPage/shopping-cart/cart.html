@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Your Cart</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="app-nav">
+            <a href="../index.html">Home</a>
+            <a href="index.html">Products</a>
+            <a href="cart.html">Cart <span id="cart-count">(0)</span></a>
+        </div>
+        
+        <h1>Your Shopping Cart</h1>
+        <div class="card">
+            <h2>Cart Items</h2>
+            <div id="cart-items">
+                <!-- Cart items will be loaded dynamically -->
+                <p id="empty-cart-message">Your cart is empty.</p>
+            </div>
+            
+            <div class="cart-total">
+                Total: <span id="cart-total">$0.00</span>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                <button type="button" class="btn btn-secondary" id="continue-shopping-btn">Continue Shopping</button>
+                <button type="button" class="btn" id="checkout-btn">Checkout</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3>Cookie Storage</h3>
+            <p>Your cart items are stored in cookies with a 7-day expiration by default.</p>
+            <p>You can clear your cart by clicking the button below:</p>
+            <button type="button" class="btn btn-secondary" id="clear-cart-btn">Clear Cart</button>
+            
+            <div style="margin-top: 20px;">
+                <h4>Cookie Expiration</h4>
+                <p>Set how long you want your cart to be remembered:</p>
+                <select id="cookie-expiration">
+                    <option value="1">1 day</option>
+                    <option value="7" selected>7 days</option>
+                    <option value="30">30 days</option>
+                </select>
+                <button type="button" class="btn btn-secondary" id="update-expiration-btn">Update</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/utils.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="js/shopping-cart.js"></script>
+</body>
+</html>

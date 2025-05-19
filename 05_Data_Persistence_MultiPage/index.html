@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Persistence Multi-Page App</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Persistence Multi-Page App</h1>
+        <p style="text-align: center; margin-bottom: 30px;">
+            Explore different web storage APIs through these three applications
+        </p>
+        
+        <div class="card">
+            <h2>Multi-Step Registration Form</h2>
+            <p>A two-step registration form that uses <strong>localStorage</strong> to persist data between steps.</p>
+            <ul style="margin: 15px 0;">
+                <li>Step 1: Enter name and email</li>
+                <li>Step 2: Create password and confirm</li>
+                <li>Data persists even if you close the browser</li>
+            </ul>
+            <div style="text-align: center;">
+                <a href="registration-form/index.html" class="btn">Try Registration Form</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Shopping Cart System</h2>
+            <p>A shopping cart implementation that uses <strong>cookies</strong> to store selected items.</p>
+            <ul style="margin: 15px 0;">
+                <li>Browse and add products to your cart</li>
+                <li>View your cart with selected items</li>
+                <li>Data persists with configurable expiration</li>
+            </ul>
+            <div style="text-align: center;">
+                <a href="shopping-cart/index.html" class="btn">Try Shopping Cart</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Quiz Application</h2>
+            <p>A simple quiz app that uses <strong>sessionStorage</strong> to track progress and score.</p>
+            <ul style="margin: 15px 0;">
+                <li>Answer multiple-choice questions</li>
+                <li>See your final score</li>
+                <li>Data is cleared when browser is closed</li>
+            </ul>
+            <div style="text-align: center;">
+                <a href="quiz-app/index.html" class="btn">Try Quiz App</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/navigation.js"></script>
+</body>
+</html>
