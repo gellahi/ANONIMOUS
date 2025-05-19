@@ -1,0 +1,60 @@
+/* Custom styles to complement Tailwind CSS */
+
+/* Map container position relative for loading overlay */
+#map-container {
+    position: relative;
+}
+
+/* Loading overlay for map */
+#loading-map {
+    z-index: 10;
+}
+
+/* Custom marker popup styles */
+.mapboxgl-popup {
+    max-width: 300px;
+}
+
+.mapboxgl-popup-content {
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Place result item hover effect */
+.place-result-item {
+    transition: background-color 0.2s ease;
+}
+
+.place-result-item:hover {
+    background-color: #f3f4f6;
+    cursor: pointer;
+}
+
+/* Star rating display */
+.star-rating {
+    color: #f59e0b;
+}
+
+/* Custom scrollbar for results list */
+#results-container {
+    max-height: 400px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+#results-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+#results-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#results-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+#results-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

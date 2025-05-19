@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Finder App</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Mapbox CSS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <h1 class="text-2xl font-bold">Location Finder</h1>
+            <p class="text-sm">Find places near you with ease</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Left Column: Search and Results -->
+            <div class="lg:col-span-1 space-y-6">
+                <!-- Search Form -->
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <h2 class="text-xl font-semibold mb-4">Find Nearby Places</h2>
+                    <form id="search-form" class="space-y-4">
+                        <div>
+                            <label for="place-type" class="block text-sm font-medium text-gray-700">Place Type</label>
+                            <input type="text" id="place-type" name="place-type" placeholder="e.g., restaurants, hospitals, cafes" 
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="radius" class="block text-sm font-medium text-gray-700">Radius (meters)</label>
+                            <input type="number" id="radius" name="radius" value="1000" min="100" max="5000" 
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            Search
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Results List -->
+                <div class="bg-white rounded-lg shadow-md p-4">
+                    <h2 class="text-xl font-semibold mb-4">Results</h2>
+                    <div id="results-list" class="space-y-3">
+                        <div id="loading-results" class="hidden text-center py-4">
+                            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
+                            <p class="mt-2 text-gray-600">Loading results...</p>
+                        </div>
+                        <div id="no-results" class="hidden text-center py-4">
+                            <p class="text-gray-600">No places found. Try a different search.</p>
+                        </div>
+                        <div id="results-container"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Map -->
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-lg shadow-md p-4 h-full">
+                    <div id="map-container" class="h-[500px] rounded-lg">
+                        <div id="map" class="w-full h-full rounded-lg"></div>
+                        <div id="loading-map" class="absolute inset-0 flex items-center justify-center bg-white bg-opacity-80 rounded-lg">
+                            <div class="text-center">
+                                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+                                <p class="mt-4 text-gray-700">Loading map...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Location Finder App</p>
+        </div>
+    </footer>
+
+    <!-- Error Modal -->
+    <div id="error-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-6 max-w-md mx-4">
+            <h3 class="text-xl font-bold text-red-600 mb-4">Error</h3>
+            <p id="error-message" class="text-gray-700 mb-6"></p>
+            <button id="close-error" class="w-full bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Mapbox JS -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <!-- Application JS -->
+    <script src="js/map.js"></script>
+    <script src="js/places.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
