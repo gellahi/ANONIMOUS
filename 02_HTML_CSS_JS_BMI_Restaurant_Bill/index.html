@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Tool Web App</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Multi-Tool Web App</h1>
+            <nav>
+                <ul class="tabs">
+                    <li><button id="bmi-tab" class="tab-btn active">BMI Calculator</button></li>
+                    <li><button id="bill-tab" class="tab-btn">Restaurant Bill</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- BMI Calculator Section -->
+            <section id="bmi-calculator" class="tool-section active">
+                <h2>BMI Calculator</h2>
+                <form id="bmi-form">
+                    <div class="form-group">
+                        <label for="weight">Weight (kg):</label>
+                        <input type="number" id="weight" name="weight" min="1" step="0.1" required>
+                        <span class="error" id="weight-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="height">Height (cm):</label>
+                        <input type="number" id="height" name="height" min="1" step="0.1" required>
+                        <span class="error" id="height-error"></span>
+                    </div>
+                    
+                    <div class="button-group">
+                        <button type="submit" class="btn calculate-btn">Calculate BMI</button>
+                        <button type="button" class="btn clear-btn" id="bmi-clear">Clear</button>
+                    </div>
+                </form>
+                
+                <div id="bmi-result" class="result-container">
+                    <h3>Your BMI Result</h3>
+                    <div class="result-value">
+                        <span id="bmi-value">-</span>
+                    </div>
+                    <div class="result-status">
+                        Status: <span id="bmi-status">-</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Restaurant Bill Section -->
+            <section id="restaurant-bill" class="tool-section">
+                <h2>Restaurant Bill Calculator</h2>
+                <form id="bill-form">
+                    <div class="menu-items">
+                        <h3>Menu Items</h3>
+                        
+                        <div class="menu-item">
+                            <label for="item1">Pizza ($12.99):</label>
+                            <input type="number" id="item1" name="item1" min="0" value="0" class="quantity-input">
+                        </div>
+                        
+                        <div class="menu-item">
+                            <label for="item2">Burger ($8.99):</label>
+                            <input type="number" id="item2" name="item2" min="0" value="0" class="quantity-input">
+                        </div>
+                        
+                        <div class="menu-item">
+                            <label for="item3">Pasta ($10.99):</label>
+                            <input type="number" id="item3" name="item3" min="0" value="0" class="quantity-input">
+                        </div>
+                        
+                        <div class="menu-item">
+                            <label for="item4">Salad ($6.99):</label>
+                            <input type="number" id="item4" name="item4" min="0" value="0" class="quantity-input">
+                        </div>
+                        
+                        <div class="menu-item">
+                            <label for="item5">Soft Drink ($2.49):</label>
+                            <input type="number" id="item5" name="item5" min="0" value="0" class="quantity-input">
+                        </div>
+                    </div>
+                    
+                    <div class="tax-option">
+                        <label for="tax">
+                            <input type="checkbox" id="tax" name="tax" checked>
+                            Apply Tax (8%)
+                        </label>
+                    </div>
+                    
+                    <div class="button-group">
+                        <button type="submit" class="btn calculate-btn">Calculate Bill</button>
+                        <button type="button" class="btn clear-btn" id="bill-clear">Clear</button>
+                    </div>
+                </form>
+                
+                <div id="bill-result" class="result-container">
+                    <h3>Bill Summary</h3>
+                    <div class="bill-details">
+                        <div class="bill-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="bill-row" id="tax-row">
+                            <span>Tax (8%):</span>
+                            <span id="tax-amount">$0.00</span>
+                        </div>
+                        <div class="bill-row total-row">
+                            <span>Total:</span>
+                            <span id="total-amount">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Multi-Tool Web App</p>
+        </footer>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
