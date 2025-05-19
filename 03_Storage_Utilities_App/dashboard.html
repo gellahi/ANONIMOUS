@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Storage Utilities App</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>Dashboard</h1>
+            <div id="user-welcome" class="welcome-message">Welcome, <span id="username"></span>!</div>
+            <button id="logout-btn" class="btn logout-btn">Logout</button>
+        </div>
+        
+        <div class="dashboard-content">
+            <div class="card">
+                <h2>Background Color Customizer</h2>
+                <p>Select a background color for your dashboard:</p>
+                <div class="color-picker">
+                    <input type="color" id="bg-color-picker" value="#ffffff">
+                    <button id="apply-color" class="btn">Apply Color</button>
+                </div>
+                <p class="note">Your color preference will be saved for future visits.</p>
+            </div>
+            
+            <div class="card">
+                <h2>Session Information</h2>
+                <p>Your session data is stored using sessionStorage.</p>
+                <p>Session will expire when you close the browser or logout.</p>
+                <div id="session-info" class="session-info">
+                    <p>Login time: <span id="login-time"></span></p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Storage Demo</h2>
+                <div class="storage-info">
+                    <div class="storage-type">
+                        <h3>localStorage</h3>
+                        <p>Persists even after browser is closed</p>
+                        <p>Used for: User credentials, color preferences</p>
+                    </div>
+                    <div class="storage-type">
+                        <h3>sessionStorage</h3>
+                        <p>Cleared when browser is closed</p>
+                        <p>Used for: Current session data</p>
+                    </div>
+                    <div class="storage-type">
+                        <h3>Cookies</h3>
+                        <p>Can be set with expiration date</p>
+                        <p>Used for: Cookie notice preference</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Cookie Notice -->
+    <div id="cookie-notice" class="cookie-notice">
+        <p>This website uses cookies to ensure you get the best experience on our website.</p>
+        <button id="accept-cookies" class="btn">Accept</button>
+    </div>
+    
+    <script src="js/session.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/cookies.js"></script>
+</body>
+</html>

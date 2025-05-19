@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Utilities App</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Storage Utilities App</h1>
+        
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="login">Login</button>
+            <button class="tab-btn" data-tab="signup">Signup</button>
+        </div>
+        
+        <div class="tab-content">
+            <!-- Login Form -->
+            <div id="login" class="tab-pane active">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-username">Username</label>
+                        <input type="text" id="login-username" required>
+                        <div class="error-message" id="login-username-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required>
+                        <div class="error-message" id="login-password-error"></div>
+                    </div>
+                    <div class="error-message" id="login-error"></div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </div>
+            
+            <!-- Signup Form -->
+            <div id="signup" class="tab-pane">
+                <h2>Signup</h2>
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="signup-username">Username</label>
+                        <input type="text" id="signup-username" required>
+                        <div class="error-message" id="signup-username-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" required>
+                        <div class="error-message" id="signup-password-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm-password">Confirm Password</label>
+                        <input type="password" id="signup-confirm-password" required>
+                        <div class="error-message" id="signup-confirm-password-error"></div>
+                    </div>
+                    <div class="error-message" id="signup-error"></div>
+                    <button type="submit" class="btn">Signup</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Cookie Notice -->
+    <div id="cookie-notice" class="cookie-notice">
+        <p>This website uses cookies to ensure you get the best experience on our website.</p>
+        <button id="accept-cookies" class="btn">Accept</button>
+    </div>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/cookies.js"></script>
+</body>
+</html>
