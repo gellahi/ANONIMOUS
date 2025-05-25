@@ -1,0 +1,245 @@
+# ===================================
+# Generic Web Development .gitignore
+# ===================================
+
+# Node.js Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Package Manager Lock Files (optional - uncomment if you want to ignore them)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Environment Variables & Configuration
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.staging
+config.json
+secrets.json
+
+# Build Outputs & Distribution
+dist/
+build/
+out/
+.next/
+.nuxt/
+.vuepress/dist/
+.serverless/
+.fusebox/
+.dynamodb/
+
+# Coverage & Testing
+coverage/
+*.lcov
+.nyc_output/
+.coverage/
+htmlcov/
+.tox/
+.pytest_cache/
+.jest/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime & Process Files
+pids/
+*.pid
+*.seed
+*.pid.lock
+.grunt/
+lib-cov/
+
+# Cache Directories
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Temporary Folders
+tmp/
+temp/
+.tmp/
+.temp/
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Operating System Files
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Database Files
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+*.s3db
+*.sl3
+data/
+database/
+*.mdb
+*.accdb
+
+# Backup Files
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.tmp
+
+# Compiled Files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.dylib
+
+# Archives
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Media Files (uncomment if you want to ignore large media files)
+# *.mp4
+# *.avi
+# *.mov
+# *.wmv
+# *.flv
+# *.webm
+# *.mp3
+# *.wav
+# *.flac
+# *.aac
+# *.ogg
+# *.wma
+
+# Image Files (uncomment if you want to ignore images)
+# *.jpg
+# *.jpeg
+# *.png
+# *.gif
+# *.bmp
+# *.tiff
+# *.svg
+# *.ico
+# *.webp
+
+# Documentation Build
+docs/_build/
+site/
+
+# Python (if you have any Python scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Ruby (if you have any Ruby files)
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+.bundle/
+vendor/bundle
+lib/bundler/man/
+
+# PHP (if you have any PHP files)
+/vendor/
+composer.phar
+composer.lock
+.env.php
+
+# Miscellaneous
+*.tgz
+*.tar.gz
+.sass-cache/
+.connect.lock
+.typings/
+.history/
+.ionide/
+
+# Custom Project Specific (add your own patterns below)
+# ====================================================
+# Add any project-specific files or folders here
