@@ -92,21 +92,6 @@ const Login = () => {
           Create one here
         </Link>
       </p>
-
-      {/* Demo credentials for testing */}
-      <div style={{ 
-        marginTop: '30px', 
-        padding: '15px', 
-        background: '#f8f9fa', 
-        borderRadius: '5px',
-        fontSize: '14px'
-      }}>
-        <strong>Demo Credentials:</strong>
-        <br />
-        <strong>Admin:</strong> admin@demo.com / password123
-        <br />
-        <strong>User:</strong> user@demo.com / password123
-      </div>
     </div>
   );
 };
